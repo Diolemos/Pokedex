@@ -1,43 +1,16 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+  
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
 }
 
+/* import Roboto */
 
-ul, ol {
-  list-style: none;
-}
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
-
-body {
-  font-family: 'Roboto', sans-serif;
-  background-color: #f8f8f8;
-  color: #333;
-  line-height: 1.4;
-}
-
-img {
-  display: block;
-  max-width: 100%;
-  height: auto;
-}
-
-
-a {
-  text-decoration: none;
-  color: inherit;
-}
-
-button {
-  border: none;
-  background: none;
-  cursor: pointer;
-  font: inherit;
-}
-
-input, button, textarea {
-  font-family: inherit;
-  font-size: 1rem;
+html, body{
+    font-family: 'Roboto', sans-serif; 
 }
