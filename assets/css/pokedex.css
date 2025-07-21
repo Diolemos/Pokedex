@@ -11,13 +11,14 @@
     padding: 1rem;
     border-width: 12px;
     border-style:groove;
-    
+    border-color: var(--grass-light);
     border-radius: 16px;
     width: 250px;
     height: 350px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    background-color: var(--grass-light);
 }
 .name{
     text-transform: capitalize;
@@ -26,7 +27,7 @@
 }
 
 .info-container :nth-child(2){
-    color: rgb(139, 140, 141);
+    color: rgb(117, 117, 117);
     font-weight: 800;
 }
 
@@ -37,6 +38,15 @@
 }
 
 .type-container{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+.type-container li{
+    padding: 3px;
+    font-weight: 600;
+    width: 80px;
+    border-radius: 12px;
     
 }
 
@@ -48,22 +58,3 @@
 }
 
 
-/* Type background colors */
-/* .type.normal   { background-color: #a6a877; }
-.type.grass    { background-color: #77c850; }
-.type.fire     { background-color: #ee7f30; }
-.type.water    { background-color: #678fee; }
-.type.electric { background-color: #f7cf2e; }
-.type.ice      { background-color: #98d5d7; }
-.type.ground   { background-color: #dfbf69; }
-.type.flying   { background-color: #a98ff0; }
-.type.poison   { background-color: #a040a0; }
-.type.fighting { background-color: #bf3029; }
-.type.psychic  { background-color: #f65687; }
-.type.dark     { background-color: #725847; }
-.type.rock     { background-color: #b8a137; }
-.type.bug      { background-color: #a8b720; }
-.type.ghost    { background-color: #6e5896; }
-.type.steel    { background-color: #b9b7cf; }
-.type.dragon   { background-color: #6f38f6; }
-.type.fairy    { background-color: #f9aec7; } */
