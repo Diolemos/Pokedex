@@ -1,0 +1,109 @@
+:root {
+  /* Normal */
+  --normal-main: #a6a877;
+  --normal-light: #d6d6b0;
+  --normal-dark: #6e6e4b;
+  --normal-darker: #2c2c1e;
+
+  /* Grass */
+  --grass-main: #77c850;
+  --grass-light: #b3e28f;
+  --grass-dark: #4e7c30;
+  --grass-darker: #1b2b11;
+
+  /* Fire */
+  --fire-main: #ee7f30;
+  --fire-light: #f5b97c;
+  --fire-dark: #a5480b;
+  --fire-darker: #4d1f00;
+
+  /* Water */
+  --water-main: #678fee;
+  --water-light: #9fc1ff;
+  --water-dark: #3e63b3;
+  --water-darker: #1c2f5e;
+
+  /* Electric */
+  --electric-main: #f7cf2e;
+  --electric-light: #fff57d;
+  --electric-dark: #c2a206;
+  --electric-darker: #5d4e00;
+
+  /* Ice */
+  --ice-main: #98d5d7;
+  --ice-light: #c2f0f2;
+  --ice-dark: #6ba2a4;
+  --ice-darker: #355253;
+
+  /* Ground */
+  --ground-main: #dfbf69;
+  --ground-light: #f5e3a2;
+  --ground-dark: #9e8032;
+  --ground-darker: #4c3b15;
+
+  /* Flying */
+  --flying-main: #a98ff0;
+  --flying-light: #cdbef7;
+  --flying-dark: #6d56aa;
+  --flying-darker: #332757;
+
+  /* Poison */
+  --poison-main: #8f398f;
+  --poison-light: #cc73cc;
+  --poison-dark: #702770;
+  --poison-darker: #3a143a;
+
+  /* Psychic */
+  --psychic-main: #f65687;
+  --psychic-light: #ffa2bc;
+  --psychic-dark: #a8325a;
+  --psychic-darker: #4f162a;
+
+  /* Fighting */
+  --fighting-main: #bf3029;
+  --fighting-light: #e2756e;
+  --fighting-dark: #841d18;
+  --fighting-darker: #3b0c0a;
+
+  /* Dark */
+  --dark-main: #725847;
+  --dark-light: #a98a74;
+  --dark-dark: #3e2f24;
+  --dark-darker: #1a130e;
+
+  /* Rock */
+  --rock-main: #b8a137;
+  --rock-light: #e5d47f;
+  --rock-dark: #786b22;
+  --rock-darker: #322d0f;
+
+  /* Bug */
+  --bug-main: #a8b720;
+  --bug-light: #d9e653;
+  --bug-dark: #6b7a13;
+  --bug-darker: #2f3309;
+
+  /* Ghost */
+  --ghost-main: #6e5896;
+  --ghost-light: #a797c3;
+  --ghost-dark: #44325f;
+  --ghost-darker: #1e1630;
+
+  /* Steel */
+  --steel-main: #b9b7cf;
+  --steel-light: #e5e4f2;
+  --steel-dark: #8684a3;
+  --steel-darker: #3e3c51;
+
+  /* Dragon */
+  --dragon-main: #6f38f6;
+  --dragon-light: #a07cff;
+  --dragon-dark: #3b1da8;
+  --dragon-darker: #180d4c;
+
+  /* Fairy */
+  --fairy-main: #f9aec7;
+  --fairy-light: #ffd6e4;
+  --fairy-dark: #b96e89;
+  --fairy-darker: #5a2f3d;
+} 
