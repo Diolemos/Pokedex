@@ -1,9 +1,11 @@
 
 .content{
     max-width: 100%;
+    padding-top: 2rem;
     display: flex;
     flex-direction: column;
 }
+
 
 
 .pokemon-card  img{
