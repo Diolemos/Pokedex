@@ -40,10 +40,10 @@ export function createPokemonCard(pokemon) {
       <div class="card-back">
         <h3>Stats</h3>
         <ul class="stats">
-          <li>HP: ${pokemon.stats.hp}</li>
-          <li>Attack: ${pokemon.stats.attack}</li>
-          <li>Defense: ${pokemon.stats.defense}</li>
-          <li>Speed: ${pokemon.stats.speed}</li>
+          <li><span>HP:</span>  <span> ${pokemon.stats.hp} </span> </li>
+          <li><span>Attack:</span>  <span> ${pokemon.stats.attack} </span></li>
+          <li><span>Defense:</span> <span> ${pokemon.stats.defense} </span></li>
+          <li><span>Speed:</span>  <span> ${pokemon.stats.speed} </span></li>
         </ul>
       </div>
 

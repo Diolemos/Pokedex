@@ -139,6 +139,13 @@
 }
 .card-back .stats li{
     padding: 5px;
-    background-color: aliceblue;
+    font-weight: 900;
+    font-size: 18px;
+    letter-spacing: 1px;
+    background: #ffffff;
+background: linear-gradient(100deg,rgba(255, 255, 255, 0.86) 0%, rgba(255, 255, 255, 0.4) 100%);
     
+}
+.stats li span:nth-of-type(2){
+    float: right;
 }
