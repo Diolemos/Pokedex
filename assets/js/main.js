@@ -1,5 +1,5 @@
 import { fetchPokemons } from './api/pokeApi.js';
-import { createPokemonCard } from './components/pokemonCard.js';
+import { createPokemonCard,flipCard } from './components/pokemonCard.js';
 
 const pokemonList = document.getElementById('pokemonList');
 const scrollTrigger = document.getElementById('infiniteScrollTrigger');
@@ -15,9 +15,16 @@ async function loadAndRenderPokemons() {
   const pokemons = await fetchPokemons(offset, limit);
   const html = pokemons.map(createPokemonCard).join('');
   pokemonList.insertAdjacentHTML('beforeend', html);
-
+  attachFlipListeners();
   offset += limit;
   loading = false;
+}
+
+function attachFlipListeners() {
+  const cards = document.querySelectorAll('.pokemon-card');
+  cards.forEach(card => {
+    card.addEventListener('click', flipCard);
+  });
 }
 
 // Infinite Scroll: Observe the trigger element
