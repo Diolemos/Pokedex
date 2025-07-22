@@ -37,6 +37,8 @@ body{
     transform-style: preserve-3d;
     transition: transform 0.6s;
     cursor: pointer;
+    -webkit-box-shadow: -7px 12px 27px 5px rgba(0,0,0,0.85); 
+box-shadow: -7px 12px 27px 5px rgba(0,0,0,0.85);
 }
 .name{
     text-transform: capitalize;
