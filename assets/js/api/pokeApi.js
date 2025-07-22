@@ -7,12 +7,21 @@ const BASE_URL = 'https://pokeapi.co/api/v2/pokemon';
  */
 function transformToPokemon(data) {
   const types = data.types.map(slot => slot.type.name);
+  
+  const stats = {};
+  for (const s of data.stats) {
+    const name = s.stat.name;
+    if (['hp', 'attack', 'defense', 'speed'].includes(name)) {
+      stats[name] = s.base_stat;
+    }
+  }
 
   return new Pokemon({
     id: data.id,
     name: data.name,
     types,
-    image: data.sprites.other['dream_world'].front_default
+    image: data.sprites.other['dream_world'].front_default,
+    stats
   });
 }
 
