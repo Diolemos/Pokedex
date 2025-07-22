@@ -5,7 +5,7 @@ It was inspired by a lesson from a **DIO (Digital Innovation One)** front-end co
 
 ---
 
-## 🚀 Features
+##  Features
 
 - 🔁 **Flip card animation** to view Pokémon stats
 - 🔍 **Search bar**: filter by name or number
