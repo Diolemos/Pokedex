@@ -5,6 +5,7 @@
   grid-template-columns: repeat(2, 1fr);
   gap: 10px;
   justify-items: center;
+  gap: 40px;
   }
 
 }
@@ -15,6 +16,7 @@
   grid-template-columns: repeat(3, 1fr);
   gap: 10px;
   justify-items: center;
+  gap: 60px;
   }
 
 }
