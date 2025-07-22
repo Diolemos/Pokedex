@@ -1,4 +1,8 @@
 /* Tablet - min 600px */
+@media (max-width: 600px){
+    header{display: none;}
+}
+
 @media (min-width: 600px) {
 .content #pokemonList {
    display: grid;

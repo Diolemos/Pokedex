@@ -3,6 +3,35 @@ body{
     background-repeat: repeat;
 
 }
+
+header{
+    background-color: #ffffff;
+   padding: 1rem;
+   border-bottom: 5px solid black;
+    position: sticky;
+    top: 0;
+    z-index: 10000;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 100px;
+}
+.lookup-icon{
+    font-size: 28px;
+}
+.search-bar {
+  text-align: center;
+ 
+}
+
+#searchInput {
+  padding: 8px 12px;
+  font-size: 16px;
+  width: 200px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
 .content{
     width: 100%;
     max-width: 1365px;
@@ -159,3 +188,4 @@ background: linear-gradient(100deg,rgba(255, 255, 255, 0.86) 0%, rgba(255, 255, 
 .stats li span:nth-of-type(2){
     float: right;
 }
+
