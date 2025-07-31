@@ -20,7 +20,7 @@ function transformToPokemon(data) {
     id: data.id,
     name: data.name,
     types,
-    image: data.sprites.other['dream_world'].front_default,
+    image: data.sprites.other['official-artwork'].front_default,
     stats
   });
 }
@@ -44,4 +44,13 @@ export async function fetchPokemons(offset = 0, limit = 10) {
   const detailPromises = data.results.map(pokemon => fetchPokemonDetail(pokemon.url));
   const pokemons = await Promise.all(detailPromises);
   return pokemons;
+}
+/*
+*
+* 
+*/
+export async function fetchPokemonByIdOrName(idOrName) {
+  const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${idOrName}`);
+  const data = await response.json();
+  return transformToPokemon(data);
 }
