@@ -1,5 +1,14 @@
 export function createPokemonCard(pokemon) {
-  return `
+ if (!pokemon || !pokemon.name || !pokemon.id) {
+  
+  return (`
+      <div class="pokemon-card error">
+        <p>❌ Pokémon data invalid or not found.</p>
+      </div>
+    `);
+  }
+  
+  return( `
     <li 
       class="pokemon-card ${pokemon.primaryType}" 
       data-id="${pokemon.id}"
@@ -48,7 +57,7 @@ export function createPokemonCard(pokemon) {
       </div>
 
     </li>
-  `;
+  `);
 }
 export function flipCard(event) {
   const card = event.currentTarget;
