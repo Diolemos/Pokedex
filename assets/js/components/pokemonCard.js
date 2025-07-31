@@ -1,10 +1,41 @@
 export function createPokemonCard(pokemon) {
  if (!pokemon || !pokemon.name || !pokemon.id) {
   
-  return (`
-      <div class="pokemon-card error">
-        <p>❌ Pokémon data invalid or not found.</p>
-      </div>
+  //TODO: STYLE THE ".POKEMON-CARD ERROR" SELECTOR
+  
+  return  (` 
+      <li 
+        class="pokemon-card  missingno" 
+        style="
+          background-color: var(--normal-light, #ccc);
+          border-color: var(--normal-dark, #888);
+        "
+      >
+        <div class="card-front">
+          <div class="info-container">
+            <span class="name">MissingNo</span>
+            <span class="number">#00</span>
+          </div>
+          <div class="type-container">
+            <ol class="types">
+              <li class="type unknown" style="background-color: #555; color: #fff">
+                ??
+              </li>
+            </ol>
+          </div>
+          <img src="assets/images/MissingNo.jpg" alt="MissingNo" />
+        </div>
+
+        <div class="card-back">
+          <h3>Stats</h3>
+          <ul class="stats">
+            <li><span>HP:</span>  <span>??</span> </li>
+            <li><span>Attack:</span>  <span>??</span></li>
+            <li><span>Defense:</span> <span>??</span></li>
+            <li><span>Speed:</span>  <span>??</span></li>
+          </ul>
+        </div>
+      </li>
     `);
   }
   
