@@ -2,6 +2,9 @@ import { fetchPokemons } from './api/pokeApi.js';
 import { createPokemonCard, flipCard } from './components/pokemonCard.js';
 import { setupSearch } from './search.js';
 
+
+
+
 const pokemonList = document.getElementById('pokemonList');
 const scrollTrigger = document.getElementById('infiniteScrollTrigger');
 const searchInput = document.getElementById('searchInput');
@@ -10,6 +13,29 @@ let offset = 0;
 const limit = 10;
 let loading = false;
 let allLoadedPokemons = [];
+
+
+function renderPokemonList(pokemonArray) {
+  
+
+  // Handle "not found" signal
+  if (
+    pokemonArray.length === 1 &&
+    pokemonArray[0].notFound
+  ) {
+    pokemonList.innerHTML = `<div class="not-found">No Pokémon found 😢</div>`;
+    return;
+  }
+
+  pokemonList.innerHTML = pokemonArray.map(createPokemonCard).join('');
+  attachFlipListeners();
+}
+
+function attachFlipListeners() {
+  document.querySelectorAll('.pokemon-card').forEach(card =>
+    card.addEventListener('click', flipCard)
+  );
+}
 
 async function loadAndRenderPokemons() {
   if (loading) return;
@@ -27,26 +53,10 @@ async function loadAndRenderPokemons() {
   loading = false;
 }
 
-function attachFlipListeners() {
-  const cards = document.querySelectorAll('.pokemon-card');
-  cards.forEach(card => {
-    card.addEventListener('click', flipCard);
-  });
-}
+// ✅ Set up search (this will replace the old event listeners)
+setupSearch(searchInput, ()=>allLoadedPokemons, renderPokemonList);
 
-function renderPokemonList(pokemonArray) {
-  pokemonList.innerHTML = pokemonArray.map(createPokemonCard).join('');
-  attachFlipListeners();
-}
-
-// Setup search module
-setupSearch(
-  searchInput,
-  () => allLoadedPokemons,
-  renderPokemonList
-);
-
-//  Infinite Scroll
+// ♾️ Infinite scroll 
 const observer = new IntersectionObserver(
   entries => {
     if (entries[0].isIntersecting) {
@@ -56,5 +66,11 @@ const observer = new IntersectionObserver(
   { rootMargin: '100px' }
 );
 
+const testPokemons = [
+  ...allLoadedPokemons,
+  null,                    // null object
+  { name: '', id: null },  // invalid properties
+  {},                      // empty object
+];
 observer.observe(scrollTrigger);
 loadAndRenderPokemons();
