@@ -189,3 +189,18 @@ background: linear-gradient(100deg,rgba(255, 255, 255, 0.86) 0%, rgba(255, 255, 
     float: right;
 }
 
+.not-found {
+  position: absolute; 
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  
+  background-color: rgba(0, 0, 0, 0.479);
+  width: 80vw;
+  max-width: 500px;
+  padding: 1rem;
+  text-align: center;
+  border-radius: 8px;
+  color: white;
+  font-size: 1.4rem;
+}
