@@ -14,6 +14,12 @@ const limit = 10;
 let loading = false;
 let allLoadedPokemons = [];
 
+const testPokemons = [
+  ...allLoadedPokemons,
+  null,                    // null object
+  { name: '', id: null },  // invalid properties
+  {},                      // empty object
+];
 
 function renderPokemonList(pokemonArray) {
   
@@ -41,17 +47,25 @@ async function loadAndRenderPokemons() {
   if (loading) return;
   loading = true;
 
-  const pokemons = await fetchPokemons(offset, limit);
-  allLoadedPokemons = [...allLoadedPokemons, ...pokemons];
+  showLoaderWithDelay(400);
 
-  // Only render if there's no search query active
-  if (!searchInput.value.trim()) {
-    renderPokemonList(allLoadedPokemons);
+  try {
+    const pokemons = await fetchPokemons(offset, limit);
+    allLoadedPokemons = [...allLoadedPokemons, ...pokemons];
+
+    if (!searchInput.value.trim()) {
+      renderPokemonList(allLoadedPokemons);
+    }
+
+    offset += limit;
+  } catch (error) {
+    console.error("Error loading Pokémon:", error);
+  } finally {
+    hideLoader();
+    loading = false;
   }
-
-  offset += limit;
-  loading = false;
 }
+
 
 // ✅ Set up search (this will replace the old event listeners)
 setupSearch(searchInput, ()=>allLoadedPokemons, renderPokemonList);
@@ -66,11 +80,23 @@ const observer = new IntersectionObserver(
   { rootMargin: '100px' }
 );
 
-const testPokemons = [
-  ...allLoadedPokemons,
-  null,                    // null object
-  { name: '', id: null },  // invalid properties
-  {},                      // empty object
-];
+
+let loaderTimeout; // store timer id
+
+function showLoaderWithDelay(delay = 300) {
+  loaderTimeout = setTimeout(() => {
+    let loader = document.createElement('div');
+    loader.classList.add('loader');
+    loader.id = 'loader';
+    document.body.appendChild(loader);
+  }, delay);
+}
+
+function hideLoader() {
+  clearTimeout(loaderTimeout); // cancel timer if not triggered yet
+  const loader = document.getElementById('loader');
+  if (loader) loader.remove();
+}
+
 observer.observe(scrollTrigger);
 loadAndRenderPokemons();
