@@ -8,6 +8,7 @@ import { setupSearch } from './search.js';
 const pokemonList = document.getElementById('pokemonList');
 const scrollTrigger = document.getElementById('infiniteScrollTrigger');
 const searchInput = document.getElementById('searchInput');
+let toTopBtn = document.getElementById("toTopBtn");
 
 let offset = 0;
 const limit = 10;
@@ -98,5 +99,26 @@ function hideLoader() {
   if (loader) loader.remove();
 }
 
+
+
+// To top button
+
+
+// function scrollFunction() {
+//   if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+//     toTopBtn.style.display = "block";
+//   } else {
+//     toTopBtn.style.display = "none";
+//   }
+// }
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+toTopBtn.addEventListener("click",topFunction)
+
 observer.observe(scrollTrigger);
 loadAndRenderPokemons();
+scrollFunction()
