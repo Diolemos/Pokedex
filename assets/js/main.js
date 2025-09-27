@@ -104,13 +104,7 @@ function hideLoader() {
 // To top button
 
 
-// function scrollFunction() {
-//   if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-//     toTopBtn.style.display = "block";
-//   } else {
-//     toTopBtn.style.display = "none";
-//   }
-// }
+
 
 // When the user clicks on the button, scroll to the top of the document
 function topFunction() {
