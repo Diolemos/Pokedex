@@ -1,11 +1,27 @@
 # Pokédex Web App
 
-This project is a modern Pokédex web application built using **HTML**, **CSS**, and **JavaScript**.  
-It was inspired by a lesson from a **DIO (Digital Innovation One)** front-end course, and expanded with several improvements and features.
+This is a cool Pokédex web application built using **HTML**, **CSS**, and **JavaScript**.  
+
+I based the individual cards on some real pokemon cards from my childhood. They had stats on the back.
+<div><img src="assets/images/pikachu-vintage-card.jpg" alt="pikachu card" width="200" />
+<img src="assets/images/bulbasaur-vintage-card.png" alt="bulbasaur card" width="200" />
+</div>
+<br/>
+<div></div>
+<img src="assets/images/Screenshot-1.png" alt="app screenshot big screen" width="350" /> 
+<br/>
+<p>
+If one day the PokéAPI happens to not work properly, you’ll be able to see MissingNo (and the proper error message in the log).
+</p>
+<br/>
+<img src="assets/images/Screenshot-missingNo.png" alt="bad data, MissingNo" width="400" />
+<br/>
+<p>Of course, it's fully responsive</p>
+<img src="assets/images/Screenshot-3.png" alt="app screenshot tiny screen" width="400" /> 
 
 ---
 
-👉🔗 https://diolemos.github.io/Pokedex/
+Test it out here 👉🔗 https://diolemos.github.io/Pokedex/
    
 
 
@@ -23,7 +39,7 @@ It was inspired by a lesson from a **DIO (Digital Innovation One)** front-end co
 
 ---
 
-## Key Characteristics
+## Boring Stuff 😪💤
 
 - Structured with **modular and reusable components**
 - Applies **object-oriented JavaScript** (via a `Pokemon` class)
