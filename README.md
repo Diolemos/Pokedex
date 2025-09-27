@@ -33,7 +33,7 @@ Test it out here 👉🔗 https://diolemos.github.io/Pokedex/
 - 🧩 **CSS Modules** and **JS Modules** for better organization
 - 🧠 Applied **DRY (Don't Repeat Yourself)** and **Single Responsibility** principles
 - 🎨 **CSS variables** for type-based styling
-- 📦 **Pokemon class** abstraction to simplify data handling from the PokéAPI (as taught in the DIO lesson)
+- 📦 **Pokemon class** abstraction to simplify data handling from the PokéAPI 
 - ❌ **Robust error handling** with a custom fallback **MissingNo card** for missing or invalid Pokémon data
 - 🖼️ Switched to **official-artwork** sprites for improved image coverage
 
